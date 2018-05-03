@@ -133,6 +133,22 @@ jQuery(document).ready(function($) {
 
 
 
+
+
+
+    $('.testimonails-carousel').each(function(index, el) {
+        var slider = $(this);
+
+        slider.slick({
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true
+        })
+    });
+
+
+
     /*---------------------------
                                   Form submit
     ---------------------------*/
