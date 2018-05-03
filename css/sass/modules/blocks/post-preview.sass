@@ -1,0 +1,133 @@
+.post-excerpt-preview
+	display: block
+	color: $text-primary-color
+	
+	&__cover
+		position: relative
+		margin: 0
+		padding: 0
+		
+		img
+			display: block
+			max-width: 100% 
+			
+		figcaption
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			
+
+	&__inner
+		padding: 30px 10px 0
+		
+	&__title
+		font-size: 20px
+		font-weight: 700 
+		line-height: 1.5em  
+		
+	&__excerpt
+		display: block
+		font-size: 16px
+		line-height: 1.875em
+		font-weight: 300   
+		margin: 15px 0 10px
+		height: 5.625em
+		overflow: hidden
+		
+
+	.post-date
+		font-size: 17px
+		 
+
+
+
+
+
+
+
+.post-preview-small
+	display: flex
+	flex-wrap: wrap
+	color: $text-primary-color
+	
+	&__cover
+		width: 125px
+		padding: 0
+		margin: 0
+		
+		img
+			width: 100%
+			display: block
+			
+
+	&__inner
+		width: -webkit-calc( 100% - 125px )
+		width: calc( 100% - 125px )
+		padding-left: 15px
+		
+
+	&__title
+		font-size: 17px 
+		font-weight: 700
+		line-height: 1.5em
+	 	
+
+	.post-date
+		font-size: 14px 
+		
+
+
+
+
+.post-preview
+	padding-top: 30px
+	position: relative 
+	color: #fff
+	display: block
+
+	&__cover
+		position: relative
+		margin: 0
+		padding: 0
+		
+		&:after
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.68) 100%)
+			z-index: 1 
+		
+		img
+			display: block
+			max-width: 100% 
+		
+		figcaption
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 100%
+			
+
+	&__inner
+		padding: 0 20px 20px
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+		width: 100%
+		display: block
+		z-index: 2
+		
+	&__title
+		font-size: 20px
+		line-height: 1.5em
+		
+
+	.post-date
+		font-size: 17px 

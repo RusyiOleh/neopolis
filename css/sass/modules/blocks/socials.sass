@@ -1,0 +1,24 @@
+.socials
+	display: flex!important
+	align-items: center
+	
+	.item
+		width: 38px
+		height: 38px
+		border-radius: 50%
+		background-color: $primary-color
+		display: flex
+		align-items: center
+		transition: $transition
+		
+		&:not(:last-child)
+			margin-right: 6px 
+		
+		&:hover
+			background-color: $primary-hover-color 
+		
+		img
+			display: block
+			margin: auto
+			max-width: 18px
+			max-height: 18px  

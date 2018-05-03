@@ -120,6 +120,19 @@ jQuery(document).ready(function($) {
 
 
 
+    $('.overflow-slider__carousel').each(function(index, el) {
+        var slider = $(this);
+
+        slider.slick({
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true
+        })
+    });
+
+
+
     /*---------------------------
                                   Form submit
     ---------------------------*/

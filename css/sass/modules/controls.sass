@@ -1,25 +1,64 @@
 .btn
-    height: 50px
-    left: 50px
-    display: inline-block  
+	height: 46px
+	line-height: 20px
+	padding: 13px 30px
+	text-align: center
+	color: #fff
+	font-weight: 400
+	font-size: 17px  
+	border: 0
+	box-shadow: 0px 18px 36.1px 1.9px rgba(0, 0, 0, 0.14)
+	cursor: pointer
+	transition: $transition
+	display: inline-block
+	
+	&:hover
+		box-shadow: 0px 10px 36.1px 1.9px rgba(0, 0, 0, 0.14)
+	
+	&-primary
+		background-color: $primary-color
+		
+		&:hover
+			background-color: $primary-hover-color 
+		
+	&-secondary
+		background-color: $secondary-color
+		
+		&:hover
+			background-color: $secondary-hover-color 
+		
+	&-info
+		background-color: $info-color
+		
+		&:hover
+			background-color: $info-hover-color 
+		
+	&-warning
+		background-color: $warning-color 
+		
+		&:hover
+			background-color: $warning-hover-color 
+	
 /* ------------------------------------ */
+
+
+
+
+
 /*  SLICK ARROWS  */
 .slick-arrow,
 .slick-arrow:focus,
 .slick-arrow:active,
 .slick-arrow:hover
-	+transition(all, .2s)
-	width: 70px
-	height: 90px
+	transition: $transition
+	width: 45px
+	height: 45px
 	z-index: 10
-	background-color:  peru
-	-webkit-border-radius: 2px
-	border-radius: 2px
+	background-color: #fff
 	background-repeat: no-repeat
 	background-position: 50% 50%
-	-webkit-background-size: 23px 20px
-	-o-background-size: 23px 20px
-	background-size: 23px 20px
+	background-size: 20px auto
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12)
 
 	@media (max-width: 800px)
 		width: 50px
@@ -52,47 +91,47 @@
 
 
 .input.file
-    position: relative
-    padding: 0!important
+	position: relative
+	padding: 0!important
 
-    &:after
-        content: '';
-        width: 38px;
-        height: 38px;
-        border-radius: 6px
-        background-color: #fdbf2d
-        background-size: 20px;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-image: url(../images/upload.svg);
-        position: absolute;
-        top: 50%;
-        right: 21px;
-        -webkit-transform: translate(50%, -50%);
-        -ms-transform: translate(50%, -50%);
-        -o-transform: translate(50%, -50%);
-        transform: translate(50%, -50%);
-        pointer-events: none;
+	&:after
+		content: '';
+		width: 38px;
+		height: 38px;
+		border-radius: 6px
+		background-color: #fdbf2d
+		background-size: 20px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-image: url(../images/upload.svg);
+		position: absolute;
+		top: 50%;
+		right: 21px;
+		-webkit-transform: translate(50%, -50%);
+		-ms-transform: translate(50%, -50%);
+		-o-transform: translate(50%, -50%);
+		transform: translate(50%, -50%);
+		pointer-events: none;
 
-    input[type="file"] 
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0
-        bottom: 0
-        z-index: 2;
-        opacity: 0;
-        cursor: pointer;
+	input[type="file"] 
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0
+		bottom: 0
+		z-index: 2;
+		opacity: 0;
+		cursor: pointer;
 
-        &::-webkit-file-upload-button
-            cursor: pointer;
+		&::-webkit-file-upload-button
+			cursor: pointer;
 
 
-    span
-        +textEnd();
-        display: block
-        height: 100%
-        padding: 0 55px 0 15px
-        text-align: left
+	span
+		+textEnd();
+		display: block
+		height: 100%
+		padding: 0 55px 0 15px
+		text-align: left
