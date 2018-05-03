@@ -90,48 +90,24 @@
 	background-image: url("../images/left-arrow.svg")
 
 
-.input.file
-	position: relative
-	padding: 0!important
+.slick-dots
+	position: static
+	display: flex
+	align-items: center
+	justify-content: center
+	
+	li
+		margin: 0
+		
+		button
+			&:before
+				opacity: 1
+				font-size: 7px 
+				color: #000 
+				
 
-	&:after
-		content: '';
-		width: 38px;
-		height: 38px;
-		border-radius: 6px
-		background-color: #fdbf2d
-		background-size: 20px;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-image: url(../images/upload.svg);
-		position: absolute;
-		top: 50%;
-		right: 21px;
-		-webkit-transform: translate(50%, -50%);
-		-ms-transform: translate(50%, -50%);
-		-o-transform: translate(50%, -50%);
-		transform: translate(50%, -50%);
-		pointer-events: none;
-
-	input[type="file"] 
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0
-		bottom: 0
-		z-index: 2;
-		opacity: 0;
-		cursor: pointer;
-
-		&::-webkit-file-upload-button
-			cursor: pointer;
-
-
-	span
-		+textEnd();
-		display: block
-		height: 100%
-		padding: 0 55px 0 15px
-		text-align: left
+		&.slick-active
+			button
+				&:before
+					color: $primary-color
+					opacity: 1
