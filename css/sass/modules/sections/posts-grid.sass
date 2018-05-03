@@ -1,0 +1,51 @@
+.posts-grid
+	padding-bottom: 0 
+
+	.grid
+		background-image: url(../images/posts-grid.jpg)
+		background-repeat: no-repeat 
+		background-position: 50% 50%  
+		box-sizing: cover 
+		padding-bottom: 30px 
+		
+		&-title
+			font-family: 'BackToBlack'
+			font-size: 27px
+			color: #df246a
+			font-weight: 400
+			text-align: center
+			position: relative
+			z-index: 1
+			transform: translateY(-50%) 
+			margin-bottom: 20px 
+			
+			span
+				padding: 0 25px
+				background-color: #fff
+				position: relative
+				z-index: 1  
+			
+			&:before
+				content: ''
+				width: 100%
+				position: absolute
+				top: 50%
+				height: 1px 
+				background-color: #BCBCBC 
+				left: 0
+				right: 0
+				z-index: -1 
+				
+
+
+
+		.post-preview
+			padding-top: 0 
+			margin-bottom: 23px 
+
+			&__cover
+				figcaption
+					display: none
+					
+			.post-date
+				display: none
