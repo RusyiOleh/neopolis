@@ -9,7 +9,7 @@
 		
 		img
 			display: block
-			max-width: 100% 
+			width: 100% 
 			
 		figcaption
 			position: absolute
@@ -68,6 +68,14 @@
 		font-size: 17px 
 		font-weight: 700
 		line-height: 1.5em
+		
+
+	&__excerpt
+		display: block
+		font-size: 16px
+		line-height: 1.625em
+		overflow: hidden
+		height: 3.25em  
 	 	
 
 	.post-date
@@ -102,7 +110,7 @@
 		
 		img
 			display: block
-			max-width: 100% 
+			width: 100% 
 		
 		figcaption
 			position: absolute
@@ -127,4 +135,45 @@
 		
 
 	.post-date
+		font-size: 17px 
+		
+
+
+
+
+.post-preview-card
+	display: block
+	position: relative
+	color: $text-primary-color
+	
+	&__cover
+		position: relative
+		margin: 0
+		display: block
+		
+		img
+			display: block
+			width: 100% 
+			
+		figcaption
+			display: none
+			
+
+	&__inner
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: #FFF
+		display: block 
+		padding: 15px 30px
+		
+
+	&__title
+		font-size: 20px
+		line-height: 1.5em  
+		
+
+	.post-date
+		color: $text-secondary-color
 		font-size: 17px 
