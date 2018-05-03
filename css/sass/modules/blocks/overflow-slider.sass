@@ -1,0 +1,38 @@
+.overflow-slider
+	position: relative
+
+	&__image
+		width: 370px
+		
+
+
+	&__carousel
+		width: 1200px
+		position: absolute
+		top: 50%
+		right: -150px
+		transform: translateY(-50%)
+		opacity: 0
+		transition: opaciy 2s ease
+		
+		&.slick-initialized
+			opacity: 1
+		
+
+		.slide
+			padding: 0 15px
+			
+
+
+		.slick-prev
+			left: 15px
+			bottom: -106px
+			top: auto!important
+			transform: none
+			
+		.slick-next
+			right: auto
+			left: 75px
+			bottom: -106px
+			top: auto!important
+			transform: none
