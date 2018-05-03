@@ -23,3 +23,21 @@
             z-index: 2
             bottom: 0
             transform: translateY(50%)
+
+    .slick-arrow
+        width: 25px
+        height: 19px
+        background-color: transparent 
+        box-shadow: none
+        &.slick-prev
+            left: -60px
+            background-image: url('../images/left-arrow-long.svg') !important
+        &.slick-next
+            right: -60px
+            background-image: url('../images/right-arrow-long.svg') !important
+
+    .slick-dots
+        li.slick-active
+            button
+                &:before
+                    color: #fff
