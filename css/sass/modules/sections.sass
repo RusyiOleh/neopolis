@@ -13,11 +13,29 @@
 	&.p-0
 		padding: 0
 
-	&.top-half
-        transform: translateY(-50%)
-			
+	&.pt-0
+		padding-top: 0
+
+	&.pt-120
+		padding-top: 120px
+
+.mt-neg-300
+	margin-top: -300px
+	position: relative
+	z-index: 2
 
 
+.block-title
+	font-size: 25px
+	margin-bottom: 20px
+	&:after
+		content: ''
+		display: block
+		width: 35px
+		height: 1px
+		background-color: $grey
+		margin-top: 15px
+	
 // index.html
 @import sections/check-out
 @import sections/suggestions

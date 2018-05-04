@@ -1,0 +1,44 @@
+.address
+    margin-top: 50px
+    font-style: normal
+    font-size: 16px
+    & + *
+        margin-top: 50px
+
+    &__item
+        margin-bottom: 15px
+        display: block
+        color: #000
+        &__img
+            display: inline-block
+            vertical-align: middle
+            width: 18px
+            margin-right: 18px
+            img 
+                max-width: 100%
+                display: block
+                transition: all .1s ease-out
+        p 
+            display: inline-block
+            vertical-align: middle
+
+        &:hover
+            .address__item__img
+                img
+                    transform: translateY(-2px)
+
+
+.address-info
+    padding-right: 125px
+    font-size: 16px
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        height: 160px
+        width: 1px
+        background-color: $grey
+        top: 0
+        bottom: 0
+        margin: auto
+        right: 75px
