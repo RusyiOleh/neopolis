@@ -38,20 +38,85 @@
 /*  NAV STYLES  */
 
 .page-menu
-	ul
+	& > ul
 		list-style-type: none
 
-		li
+		& > li
 			display: inline-block
 			vertical-align: middle
 			margin: 0 10px
+			position: relative
+			z-index: 10
 
-			a
+			&.menu-item-has-children
+				padding-right: 22px
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					right: 0
+					top: 0
+					bottom: 0
+					margin: auto
+					width: 15px
+					height: 15px
+					background-image: url('../images/down-arrow.svg')
+					background-repeat: no-repeat
+					background-position: center center
+					transition: all .2s ease-out
+
+
+			& > a
 				color: #000
 				font-size: 18px
 				font-weight: 700
 				line-height: 1
 				text-transform: uppercase
+
+			& > ul 
+				position: absolute
+				background-color: #fff
+				top: 100%
+				margin-top: 25px
+				left: 50%
+				transform: translate(-50%, -40px)
+				list-style-type: none
+				text-align: left
+				min-width: 200px
+				box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04)
+				opacity: 0
+				visibility: hidden
+				transition: opacity .1s, visibility .1s, transform .4s ease-out
+				z-index: 1
+				&:before 
+					content: ''
+					display: block
+					height: 25px
+					width: 100%
+					position: absolute
+					bottom: 100%
+					left: 0
+				li 
+					display: block
+					a 
+						color: #000
+						display: block
+						padding: 10px 20px
+						font-size: 17px
+						font-weight: 500
+						text-transform: uppercase
+						transition: all .2s ease-out
+						&:hover
+							background-color: rgba(0,0,0,.04)
+
+			&:hover
+				&:after
+					transform: translateY(4px)
+				& > ul 
+					opacity: 1
+					visibility: visible
+					transform: translate(-50%, 0)
+					transition: opacity .4s, visibility .4s, transform .2s ease-out
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */

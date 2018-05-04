@@ -132,7 +132,19 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.main-news-slider').slick({
+        dots: true,
+        arrows: true,
+        autoplay: true,
+        fade: true
+    })
 
+    $('.last-news-slider').slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+    })
 
 
 
