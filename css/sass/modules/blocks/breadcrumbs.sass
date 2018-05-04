@@ -1,0 +1,26 @@
+.breadcrumbs
+    display: block
+    margin-bottom: 40px
+    list-style-type: none
+    li 
+        display: inline-block
+        vertical-align: middle
+        font-size: 16px
+        color: #b6b6b6
+        text-transform: uppercase
+        a 
+            color: #b6b6b6
+            display: inline-block
+            vertical-align: middle
+
+        &:after
+            content: '/'
+            display: inline-block
+            vertical-align: middle
+            font-size: 16px
+            color: #b6b6b6
+            margin-left: 2px
+
+        &:last-child
+            &:after
+                display: none
