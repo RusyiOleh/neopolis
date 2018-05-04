@@ -1,0 +1,39 @@
+.last-news-slider
+    opacity: 1
+    max-width: 100%
+    margin-left: -10px
+    margin-right: -10px
+    .slick-slide
+        padding: 10px
+    &__item
+        background-color: #fff
+        padding: 25px
+        min-height: 170px
+        margin: 25px 0
+        position: relative
+        color: #000
+        display: block
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12)
+        .badge
+            position: absolute
+            left: 0
+            bottom: 100%
+        &__title 
+            font-size: 20px
+            font-weight: 700
+            margin-bottom: 10px
+        .post-date
+            font-size: 17px
+            font-weight: 400
+            color: $grey
+        .btn
+            position: absolute
+            left: 45px
+            z-index: 2
+            bottom: 0
+            transform: translateY(50%)
+
+    .slick-prev
+        left: -70px
+    .slick-next
+        right: -70px
