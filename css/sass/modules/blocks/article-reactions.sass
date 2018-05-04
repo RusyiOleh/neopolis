@@ -1,0 +1,98 @@
+.rns-plugin
+
+	.rns-reactions
+		border: 1px solid $primary-color
+		padding: 25px 15px
+		display: flex
+		align-items: center
+		
+		
+		.rns-header
+			width: 25%
+			color: $primary-color
+			text-transform: uppercase
+			font-weight: 700 
+			
+		.reactions
+			width: 75%
+			padding-left: 15px 
+			
+
+	.rns-shares
+		padding: 25px 15px
+		background-color: $primary-color 
+		display: flex
+		align-items: center
+		
+		.rns-header
+			width: 25%
+			color: #fff
+			text-transform: uppercase
+			font-weight: 700
+			
+		.rns-shares-list
+			width: 75%
+			padding-left: 15px 
+			
+
+
+
+.reactions
+	display: flex
+	align-items: center
+	justify-content: center
+	
+	.rns-reaction 
+		&-button
+			margin: 0 5px
+			padding: 10px
+			white-space: nowrap
+			cursor: pointer
+			border-radius: 5px
+			transition: $transition
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0)
+			
+			&:hover
+				box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2)
+
+			.rns-icon
+				height: 28px
+				display: block
+				
+				img
+					display: block
+					max-height: 100% 
+					margin: 0 auto
+					transition: $transition
+					
+			&:hover
+				.rns-icon
+					img
+						transform: scale(1.2)
+					
+
+			.rns-label,
+			.rns-reaction-count
+				font-size: 13px 
+				display: inline
+				
+			.rns-reaction-count
+				padding-left: 5px 
+				
+			.plus-one
+				display: none
+				
+
+		&.selected .rns-reaction-button
+			background-color: $primary-color 
+			color: #fff
+			
+
+
+
+.rns-shares-list
+	display: flex
+	align-items: center
+	
+	.rns-share-button
+		padding: 5px 10px

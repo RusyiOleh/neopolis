@@ -147,7 +147,7 @@ jQuery(document).ready(function($) {
     })
 
 
-
+    /* Index page */
     $('.testimonails-carousel').each(function(index, el) {
         var slider = $(this);
 
@@ -157,6 +157,43 @@ jQuery(document).ready(function($) {
             slidesToScroll: 1,
             dots: true
         })
+    });
+
+
+
+    /* Article page (bottom section) */
+    $('.posts-mini-carousel').each(function(index, el) {
+        var slider = $(this);
+
+        slider.slick({
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            autoplay: true,
+            adaptiveHeight: true
+        })
+    });
+
+
+
+
+
+    /* Audience switcher */
+    $('.audience-progress-bar .part').on('click', function(event) {
+        event.preventDefault();
+
+        $('.audience-progress-bar .part').removeClass('active');
+        $(this).addClass('active');
+        
+        if ( $(this).hasClass('female') ) {
+            $('.audience-values').find('.list').removeClass('active')
+            $('.audience-values').find('.female-values').addClass('active');
+        } else {
+            $('.audience-values').find('.list').removeClass('active')
+            $('.audience-values').find('.male-values').addClass('active');
+        }
+
     });
 
 
