@@ -1,0 +1,39 @@
+.post-author
+	display: flex
+	align-items: center
+	
+	a
+		text-decoration: none
+		
+		&:hover
+			text-decoration: underline
+	
+	&__image
+		width: 48px
+		height: 48px
+		overflow: hidden
+		border-radius: 50%
+		
+		img
+			display: block
+			width: 100%
+			
+
+
+	&__content
+		padding-left: 20px
+		font-size: 19px  
+		
+
+	&__name
+		font-weight: 700
+		color: $text-primary-color
+		
+
+	&__date
+		color: $text-secondary-color
+		padding-left: 3px
+		
+		&:before
+			content: '/'
+			padding-right: 5px 
