@@ -1,5 +1,5 @@
 .socials
-	display: flex!important
+	display: inline-flex!important
 	align-items: center
 	
 	.item
@@ -26,3 +26,32 @@
 	&--plain 
 		.item 
 			background-color: transparent
+			
+		svg
+			display: block
+			margin: auto
+			max-width: 18px
+			max-height: 18px  
+			
+			path
+				fill: #fff!important
+				transition: $transition
+			
+
+
+	&--square
+		.item
+			border-radius: 0
+			border: 1px solid #D3D3D3
+			background-color: transparent 
+			
+			svg
+				path
+					fill: $primary-color!important
+					
+			&:hover
+				border-color: $primary-color
+				
+				svg
+					path
+						fill: #fff!important
