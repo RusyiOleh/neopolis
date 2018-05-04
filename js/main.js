@@ -147,7 +147,7 @@ jQuery(document).ready(function($) {
     })
 
 
-
+    /* Index page */
     $('.testimonails-carousel').each(function(index, el) {
         var slider = $(this);
 
@@ -156,6 +156,22 @@ jQuery(document).ready(function($) {
             slidesToShow: 2,
             slidesToScroll: 1,
             dots: true
+        })
+    });
+
+
+
+    /* Article page (bottom section) */
+    $('.posts-mini-carousel').each(function(index, el) {
+        var slider = $(this);
+
+        slider.slick({
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
+            autoplay: true,
+            adaptiveHeight: true
         })
     });
 

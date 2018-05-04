@@ -1,18 +1,23 @@
 .npl-ad
 	display: block
 	
+	a
+		display: block
+		width: 300px
+		max-width: 100% 
+		margin: 0 auto
+	
 	img
 		display: block
 		max-width: 100%
-		margin: 0 auto 
 		
 
-.article-top-advertise
+.article-advertise-top
 	float: left 
 	margin: 0 2em 1em 0
 	
 
-.article-bottom-advertise
+.article-advertise-bottom
 	display: flex
 	align-items: center
 	justify-content: flex-start
@@ -20,3 +25,14 @@
 	.npl-ad
 		&:not(:last-child)
 			margin-right: 35px 
+			
+
+
+
+.sidebar-advertise-top,
+.sidebar-advertise-middle,
+.sidebar-advertise-bottom
+	
+	.npl-ad
+		a
+			margin: 0
