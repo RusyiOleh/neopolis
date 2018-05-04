@@ -177,6 +177,27 @@ jQuery(document).ready(function($) {
 
 
 
+
+
+    /* Audience switcher */
+    $('.audience-progress-bar .part').on('click', function(event) {
+        event.preventDefault();
+
+        $('.audience-progress-bar .part').removeClass('active');
+        $(this).addClass('active');
+        
+        if ( $(this).hasClass('female') ) {
+            $('.audience-values').find('.list').removeClass('active')
+            $('.audience-values').find('.female-values').addClass('active');
+        } else {
+            $('.audience-values').find('.list').removeClass('active')
+            $('.audience-values').find('.male-values').addClass('active');
+        }
+
+    });
+
+
+
     /*---------------------------
                                   Form submit
     ---------------------------*/

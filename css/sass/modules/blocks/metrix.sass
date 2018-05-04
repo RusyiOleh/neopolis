@@ -1,0 +1,44 @@
+.metrix
+	display: flex
+	align-items: center
+	margin: 0 -15px
+	
+	&-item
+		margin: 0 15px
+		padding: 20px 40px
+		text-align: center
+		background-color: #F7F7F7 
+		line-height: normal 
+		
+		&__icon
+			height: 24px
+			display: flex
+			align-items: center
+
+			img
+				display: block
+				max-width: 24px
+				max-height: 24px
+				margin: 0 auto  
+
+			svg
+				display: block
+				width: auto
+				max-width: 24px
+				max-height: 24px
+				margin: 0 auto  
+				
+				path
+					fill: $primary-color!important
+					stroke: 3
+					stroke-miterlimit: 10
+					
+
+		&__value
+			font-size: 26px
+			font-weight: 900
+			padding: 5px 0
+			
+		&__label
+			font-size: 16px
+			opacity: 0.5

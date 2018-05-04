@@ -1,0 +1,52 @@
+.audience
+	display: flex
+	align-items: center
+	
+	&-progress-bar
+		display: flex
+		width: 450px
+		
+		.part
+			background-color: #D8C3DA
+			color: #fff
+			text-align: center
+			transition: $transition
+			padding: 25px 0
+			cursor: pointer
+			
+			.value
+				font-weight: 700 
+				
+			.icon
+				img
+					width: auto!important
+					height: 30px!important
+					margin: 0 auto
+			
+			&.active
+				background-color: $primary-color 
+				
+			&:hover
+				background-color: $primary-hover-color 
+				
+
+
+	&-values
+		padding-left: 40px
+		
+		.list
+			display: none 
+			
+			ul
+				padding-left: 0
+				
+				li
+					&:before
+						display: none
+						
+			mark
+				background-color: transparent
+				color: $primary-color 
+		
+		.active
+			display: block
