@@ -175,6 +175,19 @@ jQuery(document).ready(function($) {
         })
     });
 
+    $('.gallery').each(function(index, el) {
+        var slider = $(this);
+
+        slider.slick({
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false,
+            autoplay: true,
+            adaptiveHeight: true
+        })
+    });
+
 
 
 
