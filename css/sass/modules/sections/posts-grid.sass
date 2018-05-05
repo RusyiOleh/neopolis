@@ -42,6 +42,9 @@
 		.post-preview
 			padding-top: 0 
 			margin-bottom: 23px 
+			
+			@media (max-width: 575px)
+				margin-bottom: 12px 
 
 			&__cover
 				figcaption
@@ -49,3 +52,43 @@
 					
 			.post-date
 				display: none
+				
+
+		.container > .row			
+			& > [class*="col-"]
+				&:last-child
+					& > .row
+						@media (max-width: 575px)
+							margin: 0 -6px
+							
+						& > [class*="col-"]
+							@media (max-width: 575px)
+								padding: 0 6px
+								
+
+					.post-preview
+						&__inner
+							padding: 0 10px 10px
+							
+							@media (max-width: 575px)
+								padding: 0 8px 8px
+							
+						&__title
+							@media (max-width: 991px)
+								font-size: 13px 
+								
+							@media (max-width: 767px)
+								font-size: 20px 
+								
+							@media (max-width: 575px)
+								font-size: 14px 
+								
+				&:first-child
+					.post-preview
+						&__inner
+							@media (max-width: 575px)
+								padding: 0 15px 15px
+								
+						&__title
+							@media (max-width: 575px)
+								font-size: 16px

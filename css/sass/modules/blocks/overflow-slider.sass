@@ -1,22 +1,58 @@
-.overflow-slider
-	position: relative
+.slider-wrap
+	overflow: hidden
 	padding: 105px 0
 	margin: -105px 0
-	overflow: hidden
+	
+	@media (max-width: 1199px)
+		padding: 85px 0
+		margin: -85px 0
+		
+	@media (max-width: 767px)
+		margin: 0
+		padding: 0
+	
+.overflow-slider
+	position: relative
+	z-index: 1 
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
+	
+	@media (max-width: 767px)
+		flex-wrap: wrap
+		width: 100%
 
 	&__image
-		width: 370px
+
+		@media (max-width: 767px)
+			width: 100%
+	
+		img
+			display: block
+			
+			@media (max-width: 767px)
+				margin: 0 auto
 		
 
 
 	&__carousel
-		width: 1200px
-		position: absolute
-		top: 50%
-		right: -150px
-		transform: translateY(-50%)
 		opacity: 0
 		transition: opaciy 2s ease
+		
+		@media (min-width: 768px)
+			position: static
+			width: 1200px
+			margin-left: 85px 
+		
+		@media (max-width: 1199px) and (min-width: 768px)
+			width: 850px
+			margin-left: 50px 
+			
+		@media (max-width: 767px)
+			margin: 75px -8px 0
+			width: -webkit-calc(100% + 16px)
+			width: calc(100% + 16px)
+			position: relative
 		
 		&.slick-initialized
 			opacity: 1
@@ -25,17 +61,38 @@
 		.slide
 			padding: 0 15px
 			
-
+			@media (max-width: 1199px)
+				padding: 0 8px
+			
+		.slick-arrow
+			bottom: -102.5px
+			top: auto!important
+			
+			@media (max-width: 1199px)
+				bottom: -80px
+				
+			@media (max-width: 767px)
+				bottom: auto
+				top: 50%!important
+				transform: translate(0, -50%)!important
 
 		.slick-prev
-			left: 15px
-			bottom: -106px
-			top: auto!important
-			transform: none
+			left: auto
+			transform: translateX(15px)
+			
+			@media (max-width: 1199px)
+				transform: translateX(8px)
+				
+			@media (max-width: 767px)
+				left: -5px
 			
 		.slick-next
 			right: auto
-			left: 75px
-			bottom: -106px
-			top: auto!important
-			transform: none
+			left: auto
+			transform: translateX(75px)
+			
+			@media (max-width: 1199px)
+				transform: translateX(52px)
+				
+			@media (max-width: 767px)
+				right: -5px

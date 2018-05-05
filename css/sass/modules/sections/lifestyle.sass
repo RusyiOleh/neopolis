@@ -1,11 +1,18 @@
 .lifestyle
 	.post-excerpt-preview
+		@media (max-width: 767px)
+			margin-bottom: 40px
+			 
 		&__cover
 			figcaption
-				display: none
+				@media (min-width: 768px)
+					display: none
 				
 		.post-date
-			display: none
+			color: $text-secondary-color
+			
+			@media (min-width: 768px)
+				display: none
 			
 
 
@@ -13,11 +20,34 @@
 		margin-bottom: 20px
 		 
 		&__cover
-			width: 140px
+			@media (min-width: 768px)
+				width: 140px
+			
+			@media (max-width: 1199px) and (min-width: 768px)
+				width: 105px
+				
+			@media (max-width: 991px) and (min-width: 768px)
+				width: 90px
 			
 		&__inner
-			width: -webkit-calc( 100% - 140px )
-			width: calc( 100% - 140px )
+			@media (min-width: 768px)
+				width: -webkit-calc( 100% - 140px )
+				width: calc( 100% - 140px )
+			
+			@media (max-width: 1199px) and (min-width: 768px)
+				width: -webkit-calc( 100% - 105px )
+				width: calc( 100% - 105px )
+				
+			@media (max-width: 991px) and (min-width: 768px)
+				width: -webkit-calc( 100% - 90px )
+				width: calc( 100% - 90px )
+				
+		&__excerpt
+			@media (max-width: 767px)
+				display: none
 			
 		.post-date
-			display: none
+			color: $text-secondary-color
+			
+			@media (min-width: 768px)
+				display: none

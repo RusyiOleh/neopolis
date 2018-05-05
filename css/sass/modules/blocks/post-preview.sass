@@ -21,23 +21,60 @@
 	&__inner
 		padding: 30px 10px 0
 		
+		@media (max-width: 1199px)
+			padding: 20px 3px 0
+			
+		@media (max-width: 767px)
+			padding: 35px 15px 0
+			
+		@media (max-width: 575px)
+			padding: 20px 3px 0
+		
 	&__title
 		font-size: 20px
 		font-weight: 700 
 		line-height: 1.5em  
+		
+		@media (max-width: 1199px)
+			font-size: 15px 
+			
+		@media (max-width: 767px)
+			font-size: 26px 
+			
+		@media (max-width: 575px)
+			font-size: 18px 
 		
 	&__excerpt
 		display: block
 		font-size: 16px
 		line-height: 1.875em
 		font-weight: 300   
-		margin: 15px 0 10px
+		margin: 0.9em 0 0.6em
 		max-height: 5.625em
 		overflow: hidden
+		
+		@media (max-width: 1199px)
+			font-size: 12px
+			
+		@media (max-width: 767px)
+			font-size: 21px 
+			
+		@media (max-width: 575px)
+			font-size: 15px 
 		
 
 	.post-date
 		font-size: 17px
+		display: block
+		
+		@media (max-width: 1199px)
+			font-size: 12px 
+			
+		@media (max-width: 767px)
+			font-size: 22px 
+			
+		@media (max-width: 575px)
+			font-size: 15px 
 		 
 
 
@@ -53,6 +90,18 @@
 		padding: 0
 		margin: 0
 		
+		@media (max-width: 1199px)
+			width: 93px
+			
+		@media (max-width: 991px)
+			width: 75px
+			
+		@media (max-width: 767px)
+			width: 163px
+			
+		@media (max-width: 575px)
+			width: 115px
+		
 		img
 			width: 100%
 			display: block
@@ -63,11 +112,42 @@
 		width: calc( 100% - 125px )
 		padding-left: 15px
 		
+		@media (max-width: 1199px)
+			width: -webkit-calc( 100% - 93px )
+			width: calc( 100% - 93px )
+			
+		@media (max-width: 991px)
+			width: -webkit-calc( 100% - 75px )
+			width: calc( 100% - 75px )
+			padding-left: 10px 
+			
+		@media (max-width: 767px)
+			width: -webkit-calc( 100% - 163px )
+			width: calc( 100% - 163px )
+			padding-left: 20px 
+			
+		@media (max-width: 575px)
+			width: -webkit-calc( 100% - 115px )
+			width: calc( 100% - 115px )
+			padding-left: 10px 
+		
 
 	&__title
 		font-size: 17px 
 		font-weight: 700
 		line-height: 1.5em
+		max-height: 3em
+		overflow: hidden 
+		
+		@media (max-width: 1199px)
+			font-size: 13px 
+			
+		@media (max-width: 767px)
+			font-size: 22px
+			margin-bottom: 0.25em  
+			
+		@media (max-width: 575px)
+			font-size: 15px 
 		
 
 	&__excerpt
@@ -75,11 +155,34 @@
 		font-size: 16px
 		line-height: 1.625em
 		overflow: hidden
-		height: 3.25em  
+		height: 3.25em
+		margin-bottom: .5em 
+		
+		@media (max-width: 1199px)
+			font-size: 12px 
+			
+		@media (max-width: 991px)
+			font-size: 11px 
+			
+		@media (max-width: 767px)
+			font-size: 18px 
 	 	
 
 	.post-date
 		font-size: 14px 
+		display: block
+		
+		@media (max-width: 1199px)
+			font-size: 11px 
+			
+		@media (max-width: 991px)
+			font-size: 10px 
+			
+		@media (max-width: 767px)
+			font-size: 18px 
+			
+		@media (max-width: 575px)
+			font-size: 13px 
 		
 
 
@@ -90,6 +193,15 @@
 	position: relative 
 	color: #fff
 	display: block
+	
+	@media (max-width: 1199px)
+		padding-top: 25px
+		
+	@media (max-width: 767px)
+		padding-top: 40px 
+		
+	@media (max-width: 575px)
+		padding-top: 28px 
 
 	&__cover
 		position: relative
@@ -129,13 +241,41 @@
 		display: block
 		z-index: 2
 		
+		@media (max-width: 1199px)
+			padding: 0 15px 15px
+			
+		@media (max-width: 767px)
+			padding: 0 30px 25px
+			
+		@media (max-width: 575px)
+			padding: 0 15px 15px
+		
 	&__title
 		font-size: 20px
 		line-height: 1.5em
 		
+		@media (max-width: 1199px)
+			font-size: 15px 
+			
+		@media (max-width: 767px)
+			font-size: 27px 
+			
+		@media (max-width: 575px)
+			font-size: 19px 
+		
 
 	.post-date
 		font-size: 17px 
+		display: block
+		
+		@media (max-width: 1199px)
+			font-size: 12px 
+			
+		@media (max-width: 767px)
+			font-size: 23px 
+			
+		@media (max-width: 575px)
+			font-size: 15px 
 		
 
 
@@ -168,10 +308,22 @@
 		display: block 
 		padding: 15px 30px
 		
+		@media (max-width: 1199px)
+			padding: 15px 25px
+		
 
 	&__title
 		font-size: 20px
 		line-height: 1.5em  
+		
+		@media (max-width: 1199px)
+			font-size: 15px 
+			
+		@media (max-width: 767px)
+			font-size: 23px 
+			
+		@media (max-width: 575px )
+			font-size: 16px 
 		
 	&__excerpt
 		display: block
@@ -186,6 +338,16 @@
 	.post-date
 		color: $text-secondary-color
 		font-size: 17px 
+		display: block
+		
+		@media (max-width: 1199px)
+			font-size: 12px 
+			
+		@media (max-width: 767px)
+			font-size: 20px 
+			
+		@media (max-width: 575px)
+			font-size: 14px 
 		
 
 
@@ -262,3 +424,4 @@
 	.post-date
 		color: $text-secondary-color
 		font-size: 17px 
+		display: block

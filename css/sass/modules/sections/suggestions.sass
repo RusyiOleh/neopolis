@@ -8,6 +8,19 @@
 
 	.overflow-slider
 
+		&__image
+			img
+				@media (max-width: 1199px)
+					height: 242px
+					
+				@media (max-width: 767px)
+					width: auto
+					height: auto
+					max-width: 100% 
+
 		&__carousel
-			width: 1450px
-			right: -400px
+			@media (min-width: 768px)
+				width: 1450px
+			
+			@media (max-width: 1199px) and (min-width: 768px)
+				width: 1000px

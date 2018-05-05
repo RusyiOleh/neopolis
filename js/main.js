@@ -127,7 +127,15 @@ jQuery(document).ready(function($) {
             dots: false,
             slidesToShow: 3,
             slidesToScroll: 1,
-            arrows: true
+            arrows: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
         })
     });
 
@@ -155,9 +163,40 @@ jQuery(document).ready(function($) {
             arrows: true,
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true
+            dots: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
         })
     });
+
+    function handle_bof_mobile_slider() {
+        var wv = $(window).width();
+        var options = {
+                dots: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                responsive: [
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 1
+                      }
+                    }
+                ]
+            };
+        if ( wv < 768 ) {
+            $('.best-of-internet-mobile-slider').slick(options);
+        }
+    }
+    handle_bof_mobile_slider();
+    
 
 
 

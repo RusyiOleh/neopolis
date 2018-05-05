@@ -2,15 +2,41 @@
 	padding: 0 55px
 	margin-bottom: 0 !important
 	
+	@media (max-width: 1199px)
+		padding: 0 50px
+		
+	@media (max-width: 991px)
+		padding: 0 40px
+		
+	@media (max-width: 767px)
+		padding: 0
+		margin: 0 -8px
+	
 	.slide
 		padding: 8px 15px
+		
+		@media (max-width: 1199px)
+			padding: 8px
+			
 	
+	.slick-arrow
+		transform: translateY(-50%)
+		
 	.slick-prev
 		left: 0
+		
+		@media (max-width: 767px)
+			left: -5px
 		
 	.slick-next
 		right: 0
 		
+		@media (max-width: 767px)
+			right: -5px
+		
 
 	.slick-dots
 		padding-top: 40px 
+		
+		@media (max-width: 767px)
+			padding-top: 20px 
