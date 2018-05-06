@@ -6,5 +6,12 @@
 
 		&__image
 			img
-				width: auto
-				max-height: 312px 
+				height: 313px
+				
+				@media (max-width: 1199px)
+					height: 220px
+					
+				@media (max-width: 767px)
+					height: auto
+					max-height: 350px 
+					max-width: 100% 

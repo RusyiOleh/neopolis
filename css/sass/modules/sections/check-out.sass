@@ -4,6 +4,9 @@
 	.post-excerpt-preview,
 		margin-bottom: 40px
 		
+		@media (max-width: 991px) and (min-width: 768px)
+			margin-bottom: 30px 
+		
 		.post-date
 			color: $text-secondary-color
 			
@@ -22,7 +25,15 @@
 		margin-bottom: 40px
 		
 
-	.col-4
+	[class*='col-']
 		display: flex
 		flex-direction: column
 		justify-content: space-between
+		
+
+	.row
+		@media (max-width: 991px)
+			& > [class*="col-"]
+				&:nth-child(2)
+					.bottom-part
+						display: none 

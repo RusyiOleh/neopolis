@@ -11,7 +11,44 @@
 
 
 	.best-posts-desktop
-		margin-bottom: -25px
+		@media (min-width: 768px)
+			margin-bottom: -25px
 		 
 		.post-preview
 			margin-bottom: 25px 
+			
+
+	.slick-slider
+		margin: 0 -8px 40px
+		
+		.slick-slide
+			padding: 0 8px!important
+		 
+		.post-preview
+			margin-bottom: 0
+				
+		.slick-arrow
+			transform: none
+		
+		.slick-prev
+			left: -5px
+			
+			@media (min-width: 768px)
+				left: 0
+			
+		.slick-next
+			right: -5px
+			
+			@media (min-width: 768px)
+				right: 0
+
+	.best-posts-mobile
+		.post-preview-small
+			&__inner
+				color: #fff
+				
+			&__excerpt
+				display: none
+				
+			&:not(:last-child)
+				margin-bottom: 25px 
