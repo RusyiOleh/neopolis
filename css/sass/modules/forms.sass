@@ -102,3 +102,72 @@
         padding: 11px 30px
         font-size: 16px
         transform: translateY(-1px)
+
+
+.header-search
+    width: 30px
+    height: 30px
+    position: relative
+    input 
+        border: none
+        background-color: #fff
+        height: 35px
+        padding: 0
+        padding-left: 10px
+        font-size: 16px
+        width: 220px
+        max-width: 100%
+        background-color: #F5F5F5
+    button
+        height: 18px
+        width: 18px
+        background-image: url('../images/search.svg')
+        background-repeat: no-repeat
+        background-size: 100% 100%
+        background-position: center center
+        position: absolute
+        right: 0
+        left: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        background-color: transparent
+        border: none
+        transform: translateY(-1px)
+        pointer-events: none
+        z-index: 2
+        transition: all .2s ease-out
+
+    .form-group
+        position: absolute
+        right: 0
+        top: 0
+        margin: auto
+        transition: opacity .2s ease-out, max-width .2s ease-out, .0s top .4s
+        max-width: 100%
+        opacity: 0
+        &:after
+            content: ''
+            display: block
+            border-right: 8px solid transparent
+            border-left: 8px solid transparent
+            border-bottom: 8px solid #F5F5F5
+            position: absolute
+            right: 10px
+            bottom: 100%
+
+    ::placeholder
+        color: #ccc
+
+    &.focus,
+    &.not-empty
+        button
+            cursor: pointer
+            pointer-events: all
+        .form-group
+            max-width: 300px
+            opacity: 1
+            top: calc(100% + 8px)
+            transition: opacity .2s ease-out, max-width .2s ease-out
+        // button
+        //     right: 198px
