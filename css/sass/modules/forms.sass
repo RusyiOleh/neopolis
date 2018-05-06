@@ -31,3 +31,74 @@
         display: block
         box-shadow: 0px 0px 25.65px 1.35px rgba(0, 0, 0, 0.12)
         min-width: 120px
+
+
+.search-form
+    display: block
+    margin: 0 auto 65px
+    width: 600px
+    max-width: 100%
+    .form-group 
+        position: relative
+        input 
+            display: block
+            width: 100%
+            border: none
+            border-bottom: 1px solid $grey
+            padding-right: 140px
+            padding-left: 30px
+            line-height: 54px
+
+        label 
+            position: absolute
+            left: 30px
+            top: 0
+            bottom: 0
+            margin: auto
+            color: $primary-color
+            font-size: 18px
+            height: 18px
+            line-height: 18px
+            font-weight: 700
+            text-transform: none
+            display: block
+            pointer-events: none
+            transition: all .2s
+            span 
+                color: #000
+
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            height: 18px
+            width: 18px
+            background-image: url('../images/search.svg')
+            background-repeat: no-repeat
+            background-size: 100% 100%
+            background-position: center center
+
+        input
+            &:focus,
+            &.not-empty
+                & + label
+                    transform: translateY(-25px)
+                    font-size: 12px
+
+
+    .btn
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        box-shadow: none
+        min-width: 120px
+        height: 40px
+        padding: 11px 30px
+        font-size: 16px
+        transform: translateY(-1px)

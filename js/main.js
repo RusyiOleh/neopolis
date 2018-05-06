@@ -42,6 +42,17 @@ jQuery(document).ready(function($) {
         });
     });
 
+    $('.search-form input').blur(function(){
+        tmpval = $(this).val();
+        if(tmpval == '') {
+            $(this).addClass('empty');
+            $(this).removeClass('not-empty');
+        } else {
+            $(this).addClass('not-empty');
+            $(this).removeClass('empty');
+        }
+    });
+
 
     /*---------------------------
                                   File input logic
