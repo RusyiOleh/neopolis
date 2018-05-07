@@ -9,6 +9,9 @@
 		
 		@media (max-width: 1199px)
 			width: 225px
+			
+		@media (max-width: 991px)
+			width: 185px
 	
 	img
 		display: block
@@ -19,15 +22,29 @@
 	float: left 
 	margin: 0 2em 1em 0
 	
+	@media (max-width: 1199px)
+		margin: 0 1.5em 0.5em 0
+		
+	@media (max-width: 767px)
+		display: none
+	
 
 .article-advertise-bottom
 	display: flex
 	align-items: center
 	justify-content: flex-start
 	
+	@media (max-width: 575px)
+		margin: 0 -15px
+	
 	.npl-ad
 		&:not(:last-child)
 			margin-right: 35px 
+			
+		@media (max-width: 575px)
+			width: 50%
+			padding: 0 15px
+			margin: 0!important
 			
 
 
@@ -35,6 +52,9 @@
 .sidebar-advertise-top,
 .sidebar-advertise-middle,
 .sidebar-advertise-bottom
+
+	@media (max-width: 767px)
+		display: none
 	
 	.npl-ad
 		a

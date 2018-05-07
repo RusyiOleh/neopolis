@@ -2,36 +2,112 @@
 	.suggestions
 		padding: 40px 0
 		
+		@media (max-width: 991px)
+			padding: 30px 0
+		
 		.section-heading
 			padding: 0 30px
+			
+			@media (max-width: 991px)
+				padding: 0 20px
+				
+			@media (max-width: 767px)
+				padding: 0 
 			
 			&__title
 				font-size: 18px 
 				
+				@media (max-width: 1199px)
+					font-size: 13px
+					
+				@media (max-width: 991px)
+					font-size: 11px  
+					
+				@media (max-width: 767px)
+					font-size: 25px
+					margin-bottom: 1em 
+					
+				@media (max-width: 575px)
+					font-size: 20px 
+				
 		.slider-wrap
-			padding: 68px 0
-			margin: -68px 0
+			@media (min-width: 768px)
+				padding: 68px 0
+				margin: -68px 0
+				
+			@media (max-width: 767px)
+				overflow: visible
 		
 		.overflow-slider
 			padding: 0 30px
+			
+			@media (max-width: 991px)
+				padding: 0 20px
+				
+			@media (max-width: 767px)
+				padding: 0
 			
 			&__image
 
 				img
 					height: 245px 
+					
+					@media (max-width: 1199px)
+						height: auto
+						width: 190px
+						
+					@media (max-width: 991px)
+						width: 160px
+						
+					@media (max-width: 767px)
+						width: auto
+						max-width: 100%
+						height: auto 
 			
 			&__carousel
-				width: 1050px
-				margin-left: 50px 
+				@media (min-width: 768px)
+					width: 1050px
+					margin-left: 50px 
+				
+				@media (max-width: 1199px) and (min-width: 768px)
+					width: 720px
+					margin-left: 30px 
+					
+				@media (max-width: 991px) and (min-width: 768px)
+					width: 648px
 
 				
 				.slick-arrow
 					bottom: -63px
+					
+					@media (max-width: 1199px)
+						bottom: -55px
+						
+					@media (max-width: 991px)
+						bottom: -45px
 				
 
 	.post-preview-card
 		&__title
-			font-size: 15px
+			@media (min-width: 768px)
+				font-size: 15px
+			
+			@media (max-width: 1199px) and (min-width: 768px)
+				font-size: 11px 
+				
+			@media (max-width: 991px) and (min-width: 768px)
+				font-size: 9.3px 
 			
 		.post-date
-			font-size: 12px 
+			@media (min-width: 768px)
+				font-size: 12px 
+			
+			@media (max-width: 1199px) and (min-width: 768px)
+				font-size: 8.7px 
+				
+			@media (max-width: 991px) and (min-width: 768px)
+				font-size: 7.45px
+				
+		&__inner
+			@media (max-width: 1199px) and (min-width: 768px)
+				padding: 8px 15px

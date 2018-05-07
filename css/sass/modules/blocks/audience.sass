@@ -6,6 +6,15 @@
 		display: flex
 		width: 450px
 		
+		@media (max-width: 991px)
+			width: 320px
+			
+		@media (max-width: 767px)
+			width: 70%
+			
+		@media (max-width: 575px)
+			width: 65%
+		
 		.part
 			background-color: #D8C3DA
 			color: #fff
@@ -14,14 +23,32 @@
 			padding: 25px 0
 			cursor: pointer
 			
+			@media (max-width: 991px)
+				padding: 18px 0
+				
+			@media (max-width: 575px)
+				padding: 12px 0
+			
 			.value
 				font-weight: 700 
+				font-size: 21px 
+				display: block
+				line-height: normal 
+				
+				@media (max-width: 991px)
+					font-size: 18px 
+					
+				@media (max-width: 575px)
+					font-size: 18px
 				
 			.icon
 				img
 					width: auto!important
 					height: 30px!important
 					margin: 0 auto
+					
+					@media (max-width: 575px)
+						height: 20px!important
 			
 			&.active
 				background-color: $primary-color 
@@ -33,6 +60,25 @@
 
 	&-values
 		padding-left: 40px
+		
+		
+		@media (max-width: 1199px)
+			font-size: 17px
+			
+		@media (max-width: 991px)
+			font-size: 14.25px 
+			
+		@media (max-width: 767px)
+			font-size: 15px
+			line-height: 2em
+			padding-left: 15px
+			width: 30%  
+			
+		@media (max-width: 575px)
+			font-size: 12px
+			line-height: 1.5em  
+			width: 35%
+			padding-left: 10px 
 		
 		.list
 			display: none 

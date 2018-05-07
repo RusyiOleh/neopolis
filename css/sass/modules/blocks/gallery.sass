@@ -15,9 +15,21 @@
 		left: -50px
 		background-image: url(../images/left-arrow-white.svg)!important 
 		
+		@media (max-width: 767px)
+			left: -30px
+			
+		@media (max-width: 575px)
+			left: 0
+		
 	.slick-next
 		right: -50px
 		background-image: url(../images/right-arrow-white.svg)!important 
+		
+		@media (max-width: 767px)
+			right: -30px
+			
+		@media (max-width: 575px)
+			right: 0
 		
 	.slick-arrow
 		background-color: $primary-color 

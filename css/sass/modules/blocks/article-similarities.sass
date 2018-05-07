@@ -8,6 +8,19 @@
 			 
 			&__title
 				font-size: 18px 
+				
+				@media (max-width: 1199px)
+					font-size: 13px
+					
+				@media (max-width: 991px)
+					font-size: 11px 
+					
+				@media (max-width: 767px)
+					font-size: 25px
+					margin-bottom: 0.5em  
+					
+				@media (max-width: 575px)
+					font-size: 20px
 			
 
 
@@ -36,11 +49,17 @@
 		margin: 0 -15px
 		opacity: 0
 		
+		@media (max-width: 1199px)
+			margin: 0 -8px
+		
 		&.slick-initialized
 			opacity: 1
 		
 		.slide
 			padding: 8px 15px
+			
+			@media (max-width: 1199px)
+				padding: 8px
 			
 		.slick-dots
 			margin-top: 20px 

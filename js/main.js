@@ -228,11 +228,20 @@ jQuery(document).ready(function($) {
                     }
                 ]
             };
+        $('.best-of-internet-mobile-slider').not('.slick-initialized').slick(options);
+
         if ( wv < 768 ) {
-            $('.best-of-internet-mobile-slider').slick(options);
+            $('.best-of-internet-mobile-slider').not('.slick-initialized').slick(options);
+        } else {
+            $('.best-of-internet-mobile-slider.slick-slider').slick('unslick');
         }
     }
     handle_bof_mobile_slider();
+
+    $(window).on('resize orientationchange', function(event) {
+        event.preventDefault();
+        handle_bof_mobile_slider();
+    });
     
 
 
@@ -247,7 +256,15 @@ jQuery(document).ready(function($) {
             slidesToScroll: 1,
             dots: true,
             autoplay: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
         })
     });
 
@@ -260,7 +277,15 @@ jQuery(document).ready(function($) {
             slidesToScroll: 1,
             dots: false,
             autoplay: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
         })
     });
 
@@ -285,6 +310,39 @@ jQuery(document).ready(function($) {
 
     });
 
+
+
+
+    function article_suggestion_width() {
+        var wv = $(window).width();
+        var self_width = $('.article-page').width();
+
+        if ( wv <= 767 ) {
+            var value = (wv - self_width)/2;
+            $('.article-suggestions').css({
+                'width': wv,
+                'margin-left': -value,
+                'margin-right': -value,
+                'padding-left': value,
+                'padding-right': value,
+            });    
+        } else {
+            $('.article-suggestions').css({
+                'width': 'auto',
+                'margin-left': 0,
+                'margin-right': 0,
+                'padding-left': 0,
+                'padding-right': 0,
+            }); 
+        }    
+    }
+
+    article_suggestion_width();
+
+    $(window).on('resize orientationchange', function(event) {
+        event.preventDefault();
+        article_suggestion_width();
+    });
 
 
     /*---------------------------
