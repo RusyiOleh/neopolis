@@ -251,7 +251,15 @@ jQuery(document).ready(function($) {
             slidesToScroll: 1,
             dots: false,
             autoplay: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1
+                  }
+                }
+            ]
         })
     });
 
