@@ -2,8 +2,23 @@
     opacity: 1
     margin-left: -10px
     width: calc(100% + 20px)
+    @media (max-width: 1300px)
+        margin-left: -7px
+        width: calc(100% + 14px)
+    @media (max-width: 991px)
+        width: 100%
+        margin-left: auto
+        margin-right: auto
     .slick-slide
         padding: 10px
+        @media (max-width: 1300px)
+            padding: 7px
+        @media (max-width: 991px)
+            padding: 15px
+            &.slick-current
+                .last-news-slider__item
+                    margin-right: 0
+                    margin-left: auto
     &__item
         background-color: #fff
         padding: 25px
@@ -11,8 +26,15 @@
         margin: 25px 0
         position: relative
         color: #000
-        display: block
+        display: flex
+        flex-direction: column
+        justify-content: center
         box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12)
+        @media (max-width: 1300px)
+            min-height: 130px
+            padding: 20px
+        @media (max-width: 991px)
+            max-width: 270px
         .badge
             position: absolute
             left: 0
@@ -21,10 +43,18 @@
             font-size: 20px
             font-weight: 700
             margin-bottom: 10px
+            @media (max-width: 1300px)
+                font-size: 15px
+            @media (max-width: 991px)
+                font-size: 14px
         .post-date
             font-size: 17px
             font-weight: 400
             color: $grey
+            @media (max-width: 1300px)
+                font-size: 13px
+            @media (max-width: 991px)
+                font-size: 12.5
         .btn
             position: absolute
             left: 45px
@@ -34,5 +64,17 @@
 
     .slick-prev
         left: -70px
+        @media (max-width: 1300px)
+            left: -50px
+        @media (max-width: 1199px)
+            left: -40px
+        @media (max-width: 991px)
+            left: 0
     .slick-next
         right: -70px
+        @media (max-width: 1300px)
+            right: -50px
+        @media (max-width: 1199px)
+            right: -40px
+        @media (max-width: 991px)
+            right: 0

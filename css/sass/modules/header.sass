@@ -1,11 +1,69 @@
 .header
-
+	background-color: #fff
+	z-index: 100
+	@media (max-width: 767px)
+		position: fixed
+		top: 0
+		right: 0
+		height: 100%
+		overflow: auto
+		width: 260px
+		.site-panel-logo
+			display: none
+		.socials
+			width: 100%
+			justify-content: center
+			margin: 0 auto 20px
+			text-align: center
+		.header-search
+			display: block
+			margin: 20px auto
 	&__top
 		padding: 45px 0
+		margin: 0 auto
+		// Small devices (landscape phones, 576px and up)
+		@media (min-width: 576px)
+			max-width: 540px
+		// Medium devices (tablets, 768px and up)
+		@media (min-width: 768px)
+			max-width: 780px
+		// Large devices (desktops, 992px and up)
+		@media (min-width: 992px)
+			max-width: 910px
+		// Extra large devices (large desktops, 1200px and up)
+		@media (min-width: 1200px)
+			max-width: 100%
+
+		@media( max-width: 1300px)
+			padding: 35px 0
+		@media (max-width: 991px)
+			padding: 30px 0
 	&__bottom
 		padding: 20px 0
 		border-top: 1px solid $grey
 		border-bottom: 1px solid $grey
+		& > .row
+			margin: 0 auto
+			// Small devices (landscape phones, 576px and up)
+			@media (min-width: 576px)
+				max-width: 540px
+			// Medium devices (tablets, 768px and up)
+			@media (min-width: 768px)
+				max-width: 780px
+			// Large devices (desktops, 992px and up)
+			@media (min-width: 992px)
+				max-width: 910px
+			// Extra large devices (large desktops, 1200px and up)
+			@media (min-width: 1200px)
+				max-width: 100%
+
+		@media( max-width: 1300px)
+			padding: 10px 0
+			.row 
+				& > div 
+					width: 100%
+		@media( max-width: 991px)
+			padding: 5px 0
 		
 
 			
@@ -15,22 +73,48 @@
 .headroom--bottom 
 	transform: translateY(0)
 
+.mobile-header
+	height: 130px
+	display: flex
+	align-items: center
+	justify-content: center
+	.logo
+		max-width: 180px
+
 /* ------------------------------------ */
 /*  NAV STYLES  */
 
 .page-menu
 	& > ul
 		list-style-type: none
+		@media( max-width: 1199px)
+			display: flex
+			justify-content: space-between
+		@media (max-width: 767px)
+			display: block
 
 		& > li
 			display: inline-block
 			vertical-align: middle
-			margin: 0 10px
+			margin: 0 20px
 			position: relative
 			z-index: 10
+			@media( max-width: 1199px)
+				margin: 0
+			@media (max-width: 767px)
+				display: block
+
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
 
 			&.menu-item-has-children
 				padding-right: 22px
+				@media( max-width: 1300px)
+					padding-right: 16px
+				@media( max-width: 991px)
+					padding-right: 12px
 				&:after
 					content: ''
 					display: block
@@ -45,6 +129,13 @@
 					background-repeat: no-repeat
 					background-position: center center
 					transition: all .2s ease-out
+					@media( max-width: 1300px)
+						width: 10px
+						height: 10px
+						transform: translateY(1px)
+					@media( max-width: 991px)
+						width: 8px
+						height: 8px
 
 
 			& > a
@@ -53,6 +144,12 @@
 				font-weight: 700
 				line-height: 1
 				text-transform: uppercase
+				display: inline-block
+				vertical-align: middle
+				@media( max-width: 1300px)
+					font-size: 13px
+				@media( max-width: 991px)
+					font-size: 12px
 
 			& > ul 
 				position: absolute
@@ -69,6 +166,10 @@
 				visibility: hidden
 				transition: opacity .1s, visibility .1s, transform .4s ease-out
 				z-index: 1
+				@media( max-width: 1300px)
+					margin-top: 14px
+				@media( max-width: 991px)
+					min-width: 180px
 				&:before 
 					content: ''
 					display: block
@@ -77,6 +178,8 @@
 					position: absolute
 					bottom: 100%
 					left: 0
+					@media( max-width: 1300px)
+						height: 14px
 				li 
 					display: block
 					a 
@@ -89,6 +192,11 @@
 						transition: all .2s ease-out
 						&:hover
 							background-color: rgba(0,0,0,.04)
+						@media( max-width: 1300px)
+							font-size: 12px
+						@media( max-width: 991px)
+							padding: 6px 10px
+							font-size: 11px
 
 			&:hover
 				&:after
@@ -111,3 +219,5 @@
 	transform: rotate(0deg)
 	transition: .5s ease-in-out
 	cursor: pointer
+	@media (max-width: 767px)
+		display: block

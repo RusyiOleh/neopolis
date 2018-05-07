@@ -10,6 +10,10 @@
 		display: flex
 		align-items: center
 		transition: $transition
+
+		@media( max-width: 1300px)
+			width: 27px
+			height: 27px
 		
 		&:not(:last-child)
 			margin-right: 6px 
@@ -22,7 +26,9 @@
 			margin: auto
 			max-width: 18px
 			max-height: 18px 
-			
+			@media( max-width: 1300px)
+				max-width: 12px
+				max-height: 10px
 		svg
 			display: block
 			margin: auto

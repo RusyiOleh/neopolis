@@ -181,6 +181,14 @@ jQuery(document).ready(function($) {
         arrows: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 2
+              }
+            }
+        ]
     })
 
 
