@@ -253,20 +253,11 @@ jQuery(document).ready(function($) {
                     }
                 ]
             };
-        $('.best-of-internet-mobile-slider').not('.slick-initialized').slick(options);
-
         if ( wv < 768 ) {
-            $('.best-of-internet-mobile-slider').not('.slick-initialized').slick(options);
-        } else {
-            $('.best-of-internet-mobile-slider.slick-slider').slick('unslick');
+            $('.best-of-internet-mobile-slider').slick(options);
         }
     }
     handle_bof_mobile_slider();
-
-    $(window).on('resize orientationchange', function(event) {
-        event.preventDefault();
-        handle_bof_mobile_slider();
-    });
     
 
 
