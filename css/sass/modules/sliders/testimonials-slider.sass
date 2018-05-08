@@ -1,6 +1,11 @@
 .testimonails-carousel
 	padding: 0 55px
 	margin-bottom: 0 !important
+	opacity: 0
+		
+	&.slick-initialized
+		opacity: 1
+		transition: opaciy 2s ease
 	
 	@media (max-width: 1199px)
 		padding: 0 50px
