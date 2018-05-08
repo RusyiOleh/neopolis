@@ -7,8 +7,6 @@
         width: 460px
     @media( max-width: 991px)
         width: 440px
-    &.mt-neg-40
-        margin-top: -80px
     &__item
         background-color: #fff
         padding: 45px
@@ -19,6 +17,12 @@
         @media (max-width: 1300px)
             padding: 35px
             min-height: 200px
+        @media (max-width: 576px)
+            padding: 25px
+            min-height: 180px
+            margin: 35px 0
+        @media (max-width: 360px)
+            padding: 25px 20px
         .badge-tag
             margin-bottom: 10px
             @media (max-width: 1300px)
@@ -32,12 +36,18 @@
                 margin-bottom: 0
             @media( max-width: 991px)
                 font-size: 20px
+            @media (max-width: 576px)
+                font-size: 19px
+            @media (max-width: 360px)
+                font-size: 18px
         .post-date
             font-size: 18px
             font-weight: 400
             color: $grey
             @media (max-width: 1300px)
                 font-size: 13px
+            @media (max-width: 576px)
+                font-size: 12px
         .btn
             position: absolute
             left: 45px
@@ -46,6 +56,11 @@
             transform: translateY(50%)
             @media (max-width: 1300px)
                 left: 35px
+            @media (max-width: 576px)
+                left: 25px
+                box-shadow: 0px 6px 10px 1.9px rgba(0, 0, 0, 0.14)
+            @media (max-width: 360px)
+                left: 20px
 
     .slick-arrow
         width: 25px

@@ -186,7 +186,13 @@ jQuery(document).ready(function($) {
         dots: true,
         arrows: true,
         autoplay: true,
-        fade: true
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 440,
+                arrows: false
+              }
+        ]
     })
 
     $('.last-news-slider').slick({
@@ -200,7 +206,13 @@ jQuery(document).ready(function($) {
               settings: {
                 slidesToShow: 2
               }
-            }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                  slidesToShow: 1
+                }
+              }
         ]
     })
 

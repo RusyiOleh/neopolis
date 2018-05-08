@@ -12,6 +12,8 @@
 		height: 570px
 	@media( max-width: 991px)
 		height: 460px
+	@media (max-width: 767px)
+		height: 420px
 	
 	h1
 		margin-bottom: 40px
@@ -23,6 +25,12 @@
 		position: absolute
 		bottom: 0
 		transform: translateY(50%)
+		z-index: 2
+		width: 100%
+		@media (max-width: 767px)
+			top: 100%
+			padding-top: 20px
+			transform: none
 
 	.main-news-slider
 		margin-bottom: 80px !important
