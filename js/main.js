@@ -26,7 +26,20 @@ function exist(el){
 jQuery(document).ready(function($) {
 
     $(".header:not(.footer)").headroom();
-    
+
+    if(window.params.isMobile) {
+        $('body').addClass('mobile-view');
+    } else {
+        $('body').addClass('desktop-view');
+    }
+
+
+    $('.mobile-view .menu-item-has-children > a').click(function(e){
+        e.preventDefault();
+        $('.menu-item-has-children > a').not(this).siblings('ul').slideUp();
+        $(this).siblings('ul').slideToggle();
+    });
+ 
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
@@ -113,7 +126,7 @@ jQuery(document).ready(function($) {
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).siblings('header').toggleClass('open');
+        $(".header:not(.footer)").toggleClass('open');
     });
 
 
