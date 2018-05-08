@@ -48,6 +48,11 @@
 .block-title
 	font-size: 25px
 	margin-bottom: 20px
+	@media (max-width: 1199px)
+		font-size: 20px
+		margin-bottom: 17px
+	@media (max-width: 767px)
+		font-size: 31px
 	&:after
 		content: ''
 		display: block
@@ -55,6 +60,8 @@
 		height: 1px
 		background-color: $grey
 		margin-top: 15px
+		@media (max-width: 1199px)
+			margin-top: 12px
 
 .block-label
 	background-color: $primary-color
@@ -67,6 +74,21 @@
 	align-items: center
 	color: #fff
 	font-size: 15px
+	@media (max-width: 1199px)
+		font-size: 12px
+		height: 40px
+		padding: 0 35px
+	@media (max-width: 991px)
+		font-size: 10px
+		height: 35px
+		padding: 0 30px
+	@media (max-width: 767px)
+		font-size: 14px
+		height: 50px
+	@media (max-width: 400px)
+		font-size: 12px
+		height: 35px
+		padding: 0 20px
 	&-info
 		background-color: $info-color
 		
